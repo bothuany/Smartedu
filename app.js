@@ -1,10 +1,16 @@
 const express = require("express");
+const pageRoute = require("./routes/pageRoute");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.status(200).send("index page");
-});
+//TEMPLATE ENGINE
+app.set("view engine", "ejs");
+
+//MIDDLEWARES
+app.use(express.static("public"));
+
+//ROUTES
+app.use("/", pageRoute);
 
 const port = 3000;
 
