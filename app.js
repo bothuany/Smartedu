@@ -15,7 +15,7 @@ const app = express();
 //Connect DB
 mongoose
   .connect(
-    "mongodb+srv://rbdikmen:vvNgAfRZ5WCUUdvv@cluster0.7dmipxv.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://rbdikmen:vvNgAfRZ5WCUUdvv@cluster0.7dmipxv.mongodb.net/smartedu-db?retryWrites=true&w=majority"
   )
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
