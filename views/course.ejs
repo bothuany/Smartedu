@@ -3,7 +3,11 @@
 
 <div class="all-title-box">
 	<div class="container text-center">
-		<h1><%= course.name %><span class="m_1">Category: <%= course.category.name %></span></h1>
+		<h1><%= course.name %>
+			<% if(course.category){ %>
+			<span class="m_1">Category: <%= course.category.name %></span>
+			<% } %>
+		</h1>
 	</div>
 </div>
 
